@@ -50,4 +50,4 @@
 ## Дополнительная информация о проекте
 Проект реализован на чистом **JavaScript** c использованием библиотек **Navigo** и **Re:dom**. Для отрисовки графиков использовался **Chart.js**. Сборка проекта осуществлена с помощью **Webpack**.
 
-Ссылка на макет Figma: https://www.figma.com/design/x7tqGO2o0Z368Nr59gnBeX/Bank-(Copy)?node-id=0-1
+Ссылка на макет Figma: [https://www.figma.com/design/x7tqGO2o0Z368Nr59gnBeX/Bank-(Copy)?node-id=0-1](https://www.figma.com/design/x7tqGO2o0Z368Nr59gnBeX/Bank-(Copy)?node-id=0-1)
