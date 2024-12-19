@@ -1,0 +1,7 @@
+@use "mixins" as mixin;
+@use "vars" as vars;
+
+.draggable-item.dragging {
+  opacity: 0.5;
+  background-color: vars.$currencyBG;
+}

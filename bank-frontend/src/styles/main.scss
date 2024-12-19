@@ -1,0 +1,12 @@
+@use './style.scss';
+@use '../components/login/login.scss';
+@use '../components/header/header.scss';
+@use '../components/allert/allert.scss';
+@use '../components/customSelect/customSelect.scss';
+@use '../components/loader/loader.scss';
+@use '../pages/userBill/userBill.scss';
+@use '../pages/cashMachine/cashMachine.scss';
+@use '../pages/accountPage/accountPage.scss';
+@use '../pages/currency/currency.scss';
+@use '../pages/detailedPage/detailedPage.scss';
+@use '../styles/draggable';

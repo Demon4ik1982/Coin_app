@@ -1,0 +1,146 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/vars" as vars;
+
+.currency {
+  position: relative;
+  padding-top: 44px;
+  padding-bottom: 31px;
+
+  &__title {
+    @include mixin.marginReset();
+    padding-bottom: 50px;
+    font-family: vars.$second-family;
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: -0.02em;
+    color: vars.$blackColor;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(476px, 588px) minmax(300px, 703px);
+    grid-template-rows: auto auto;
+    gap: 50px;
+  }
+
+  &__currency-list {
+    padding: 25px 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 100%;
+    background: vars.$whiteColor;
+    box-shadow: 0 5px 20px 0 vars.$boxShadow;
+  }
+
+  &__title-h2 {
+    @include mixin.marginReset();
+    padding-bottom: 25px;
+    font-family: vars.$second-family;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: vars.$blackColor;
+  }
+
+  &__currency-user-list {
+    @include mixin.marginReset();
+    list-style: none;
+    display: grid;
+    gap: 25px;
+  }
+
+  &__currency-user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__dots {
+    flex: 1;
+    border-bottom: 1px dotted vars.$dotColor;
+    margin: 0 8px;
+    height: 0;
+  }
+
+  &__dots-red {
+    flex: 1;
+    border-bottom: 1px dotted vars.$dotColorRed;
+    margin: 0 8px;
+    height: 0;
+  }
+
+  &__dots-green {
+    flex: 1;
+    border-bottom: 1px dotted vars.$dotColorGreen;
+    margin: 0 8px;
+    height: 0;
+  }
+
+  &__currency-dots {
+    overflow: hidden;
+    max-width: 300px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  &__realtime-list {
+    padding: 25px 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 100%;
+    background: vars.$currencyBG;
+    grid-row: span 2;
+  }
+
+  &__rate {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__select-wrapper {
+    max-width: 100px;
+    width: 100%;
+  }
+
+  &__grid-change {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 25px;
+  }
+
+  &__label {
+    display: flex;
+    grid-column: span 2;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid vars.$mainColor;
+    border-radius: 7px;
+    padding: 8px 16px;
+    width: 265px;
+    height: 26px;
+    background-color: vars.$whiteColor;
+    outline: none;
+    transition: 0.3s ease;
+  }
+
+  &__button-wrapper {
+    grid-row: 1 / 3;
+    grid-column: 3;
+    align-self: center;
+    display: flex;
+    height: 100%;
+  }
+}

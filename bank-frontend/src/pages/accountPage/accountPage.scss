@@ -1,0 +1,181 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/vars" as vars;
+
+.account-info {
+  @include mixin.main();
+
+  &__info {
+    @include mixin.info();
+  }
+
+  &__info-wrapper {
+    @include mixin.info-wrapper();
+  }
+
+  &__title {
+    @include mixin.marginReset();
+    @include mixin.title();
+  }
+
+  &__number {
+    @include mixin.marginReset();
+    @include mixin.number();
+  }
+
+  &__balance {
+    @include mixin.marginReset();
+    @include mixin.balance();
+  }
+
+  &__balance-sum {
+    @include mixin.balance-sum();
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 288px auto;
+    gap: 50px;
+  }
+
+  &__new-transaction {
+    padding: 25px 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 100%;
+    background: vars.$formColor;
+  }
+
+  &__title-h2 {
+    @include mixin.marginReset();
+    @include mixin.title-h2();
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+    column-gap: 18px;
+    align-items: center;
+    justify-items: start;
+  }
+
+  &__label {
+    display: flex;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid vars.$mainColor;
+    border-radius: 7px;
+    padding: 8px 16px;
+    width: 265px;
+    height: 26px;
+    background-color: vars.$whiteColor;
+    outline: none;
+    transition: 0.3s ease;
+  }
+
+  &__btn-wrapper {
+    grid-column: 2;
+  }
+
+  &__dynamics {
+    padding: 25px 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 100%;
+    background: vars.$whiteColor;
+    box-shadow: 0 5px 20px 0 vars.$boxShadow;
+  }
+
+  &__history {
+    grid-column: span 2;
+    padding: 25px 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 100%;
+    background: vars.$formColor;
+  }
+
+  &__select-wrapper {
+    max-width: 299px;
+    width: 100%;
+  }
+}
+
+.canvas {
+  width: 100%;
+}
+
+.chart-wrapper {
+  height: 85%;
+}
+
+.history-table {
+  width: 100%;
+
+  &__title {
+    padding-left: 49px;
+    padding-right: 49px;
+    display: grid;
+    column-gap: 43px;
+    @include mixin.gridColumns();
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 15px;
+    height: 64px;
+    background: vars.$mainColor;
+  }
+
+  &__title-item {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: vars.$whiteColor;
+  }
+
+  &__title-item:nth-child(2n) {
+    margin-right: 27px;
+  }
+
+  &__title-item:nth-child(3n) {
+    margin-right: 77px;
+  }
+
+  &__list {
+    @include mixin.marginReset;
+    list-style: none;
+  }
+
+  &__list-item {
+    padding: 21px 49px 26px 49px;
+    display: grid;
+    column-gap: 43px;
+    grid-template-columns: repeat(4, auto);
+    font-weight: 400;
+    border-bottom: 2px solid vars.$boxBorder;
+  }
+
+  &__list-info {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: vars.$selectText;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 180px;
+  }
+}
+
+.green {
+  color: vars.$dotColorGreen;
+}
+
+.red {
+  color: vars.$dotColorRed;
+}

@@ -1,0 +1,89 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/vars" as vars;
+
+.select {
+  &__selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid vars.$mainColor;
+    border-radius: 7px;
+    padding: 8px 16px;
+    height: 26px;
+    background-color: vars.$whiteColor;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  &__arrow {
+    display: flex;
+    transition: 0.3s ease;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    transition: 0.3s ease;
+  }
+
+  &__items {
+    position: absolute;
+    background-color: vars.$whiteColor;
+    border: 1px solid vars.$dotColor;
+    border-radius: 4px;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 5px 20px 0 vars.$boxShadow;
+  }
+
+  &__items div {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  &__items div:hover {
+    background-color: vars.$buttonhover;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: vars.$selectText;
+  }
+
+  &__custom-select {
+    position: relative;
+    flex: 1;
+  }
+
+  &__hide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out, visibility 0s 0.5s;
+  }
+
+  &__bottom {
+    bottom: 100%;
+  }
+
+  &__input {
+    @include mixin.marginReset;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: vars.$second-family;
+    border: none;
+    outline: none;
+  }
+}
+
+.rotate {
+  rotate: -180deg;
+}

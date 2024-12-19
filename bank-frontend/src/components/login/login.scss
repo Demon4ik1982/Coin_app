@@ -1,0 +1,83 @@
+@use "../../styles/vars" as vars;
+@use "../../styles/mixins" as mixin;
+
+.account {
+  height: calc(100vh - 84px);
+  display: flex;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+
+  &__login {
+    padding-top: 50px;
+    max-width: 500px;
+    width: 100%;
+    min-height: 316px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: vars.$formColor;
+    border-radius: 20px;
+  }
+
+  &__title {
+    @include mixin.marginReset();
+    margin-bottom: 35px;
+    font-family: vars.$second-family;
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: -0.02em;
+    color: vars.$blackColor;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    row-gap: 25px;
+    column-gap: 18px;
+  }
+
+  &__form-label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    text-align: right;
+    color: vars.$labelText;
+  }
+
+  &__form-input {
+    border: 1px solid vars.$formBorder;
+    border-radius: 7px;
+    padding: 8px 10px 8px 16px;
+    width: 300px;
+    height: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: vars.$inputText;
+    outline: none;
+  }
+
+  &__form-button {
+    grid-column: 2;
+    justify-self: start;
+    border-radius: 7px;
+    padding: 14px 21px;
+    width: 83px;
+    height: 48px;
+    background: vars.$mainColor;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: vars.$whiteColor;
+  }
+}

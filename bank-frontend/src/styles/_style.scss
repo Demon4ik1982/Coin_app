@@ -1,0 +1,156 @@
+@use "./mixins" as mixin;
+@use "./vars" as vars;
+
+
+@font-face {
+  font-display: swap;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../asset/fonts/ubuntu-v20-cyrillic_latin-regular.woff2")
+    format("woff2");
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../asset/fonts/ubuntu-v20-cyrillic_latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../asset/fonts/roboto-v32-cyrillic_latin-500.woff2") format("woff2");
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../asset/fonts/work-sans-v19-latin-300.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../asset/fonts/work-sans-v19-latin-regular.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../asset/fonts/work-sans-v19-latin-500.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../asset/fonts/work-sans-v19-latin-600.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../asset/fonts/work-sans-v19-latin-700.woff2') format('woff2');
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 320px;
+  font-family: vars.$font-family;
+  background-color: vars.$whiteColor;
+  @include mixin.marginReset();
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 1440px;
+  @include mixin.makeContainer();
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.primary {
+  text-decoration: none;
+  color: vars.$mainColor;
+  text-wrap: nowrap;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 7px;
+  padding: 14px 24px;
+  background: vars.$whiteColor;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.primary:hover {
+  background: vars.$buttonhover;
+}
+
+.secondary {
+  border-radius: 7px;
+  padding: 16px;
+  background: vars.$mainColor;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: vars.$whiteColor;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary:hover {
+  background: vars.$buttonhover;
+}
+
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cursor {
+  cursor: pointer;
+}

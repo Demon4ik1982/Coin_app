@@ -1,0 +1,48 @@
+@use "../../styles/vars" as vars;
+@use "../../styles/mixins" as mixin;
+
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: vars.$mainColor;
+  box-shadow: 0 5px 20px 0 vars.$boxShadow;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  display: none;
+
+  &__list {
+    @include mixin.marginReset();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 25px;
+  }
+
+  &__link {
+    padding: 2px 15px;
+    text-decoration: none;
+    color: vars.$mainColor;
+    text-wrap: nowrap;
+    outline: none;
+    border: 2px solid vars.$mainColor;
+    border-radius: 7px;
+    padding: 14px 24px;
+    width: 134px;
+    height: 52px;
+    background: vars.$whiteColor;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    cursor: pointer;
+  }
+}
